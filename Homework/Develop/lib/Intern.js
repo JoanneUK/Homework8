@@ -1,5 +1,5 @@
 //extends the employee class
-const Employee = require("./index");
+const Employee = require("./Employee");
 class Intern extends Employee {
     constructor(name, id, email, school){
         //super gets the employee properties
@@ -23,7 +23,7 @@ class Intern extends Employee {
         let html = `<div class="card employee-card">
     <div class="card-header">
         <h2 class="card-title">${this.name}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${this.role}</h3>
+        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${this.getRole()}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">

@@ -1,6 +1,6 @@
-const Manager = require("../Manager");
-const Engineer = require("../Engineer");
-const Intern = require("../Intern");
+const Manager = require("./Develop/lib/Manager");
+const Engineer = require("./Develop/lib/Engineer");
+const Intern = require("./Develop/lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -11,7 +11,7 @@ const outputPath = path.resolve(__dirname, "output", "team.html");
 
 
 //TODO MAKE HTML RENDERER
-// const render = require("./lib/htmlRenderer");
+const render = require("./Develop/lib/htmlRenderer");
 
 const teamMembers = [];
 const idArray = [];
@@ -244,7 +244,7 @@ function appMenu() {
     console.log('inside build team')
 
 
-    // fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
+    fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
 
   }
 

@@ -1,4 +1,4 @@
-const Employee = require("./index");
+const Employee = require("./Employee");
 class Engineer extends Employee {
 
     constructor(name, id, email, github) {
@@ -6,7 +6,6 @@ class Engineer extends Employee {
         super(name, id, email);
     
         this.github = github;
-       
 
     };
 
@@ -19,7 +18,8 @@ class Engineer extends Employee {
         return "Engineer";
     };
 
-    getHTML(){//use the template literal
+    getHTML()
+    {//use the template literal
 
         let html = `<div class="card employee-card">
         <div class="card-header">
@@ -39,9 +39,3 @@ class Engineer extends Employee {
 
 };
 module.exports = Engineer;
-
-
-let joanne = new Engineer('joanne',456,'hd@gmail.com','qwerty');//this is the completion of the constructor
-let jason = new Engineer('jason',3345,'dfgh@gmail.com','hjvjvhj');
-
-console.log(joanne.getHTML())
